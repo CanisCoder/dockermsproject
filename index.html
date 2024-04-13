@@ -1,91 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paytm Recharge (Demo)</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
 
-        .header {
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            background-color: #007fff;
-            color: #fff;
-        }
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
 
-        .header img {
-            width: 350px;
-            height: 100px;
-            margin-right: 1rem;
-        }
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
 
-        .container {
-            
-            padding: 1rem;
-            width: 80%;
-            max-width: 400px;
-            border-radius: 5px;
-            background-color: #78a2be;
-        }
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
 
-        .number-section, .plan-section {
-            margin-bottom: 1rem;
-        }
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
 
-        .number-section h2, .plan-section h2 {
-            margin-bottom: 0.5rem;
-        }
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
 
-        #mobile-number, #plan-options {
-            padding: 0.5rem;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        #recharge-btn {
-            background-color: #007fff;
-            color: #fff;
-            padding: 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+.btn:hover {
+  opacity: 1;
+}
+</style>
 </head>
 <body>
-    <header class="header">
-        <img src="image.png" alt="Paytm Logo">
-        
-    </header>
-    <main class="container">
-        <section class="number-section">
-            <h2>Enter Mobile Number</h2>
-            <input type="tel" id="mobile-number" placeholder="10-digit mobile number">
-        </section>
-        <section class="plan-section">
-            <h2>Select Plan</h2>
-            <select id="plan-options">
-                <option value="">Choose a plan</option>
-                <option value="prepaid100">₹100 Prepaid Recharge</option>
-                <option value="postpaid200">₹200 Postpaid Bill Payment</option>
-            </select>
-        </section>
-        <button id="recharge-btn">Recharge</button>
-    </main>
-    <script>
-        // Simulate button click action (for demonstration purposes only)
-        document.getElementById('recharge-btn').addEventListener('click', function() {
-          alert('Redirecting to secure payment page (not functional in this demo)');
-        });
-    </script>
+
+<form action="/action_page.php" style="max-width:500px;margin:auto">
+  <h2>PAYTM RECHARGE</h2>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="psw">
+  </div>
+
+  <button type="submit" class="btn">Register</button>
+</form>
+
 </body>
 </html>
